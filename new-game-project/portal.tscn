@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dof5o4jaeea7i"]
+
+[ext_resource type="Texture2D" uid="uid://drhvf2lbjoeqa" path="res://PORTAL_000/1.png" id="1_0a7dg"]
+[ext_resource type="Texture2D" uid="uid://d1iykmmbfapkb" path="res://PORTAL_000/2.png" id="2_jl8kn"]
+[ext_resource type="Texture2D" uid="uid://dgk2lkthdxta8" path="res://PORTAL_000/3.png" id="3_3x30s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ctne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0a7dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jl8kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3x30s")
+}],
+"loop": true,
+"name": &"PORTAL",
+"speed": 30.0
+}]
+
+[node name="PORTAL" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1ctne")
+animation = &"PORTAL"
+frame_progress = 0.09905358

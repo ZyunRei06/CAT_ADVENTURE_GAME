@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://c5tdu67jy8h0u"]
+
+[ext_resource type="Texture2D" uid="uid://d0vfkin0s1cd5" path="res://POISONFLOWER_000/1.png" id="1_2tsly"]
+[ext_resource type="Texture2D" uid="uid://bh4j3ajdh2mah" path="res://POISONFLOWER_000/2.png" id="2_o82iy"]
+[ext_resource type="Texture2D" uid="uid://q6l8m3ejd71e" path="res://POISONFLOWER_000/3.png" id="3_akyco"]
+[ext_resource type="Texture2D" uid="uid://dbobjinxi3ty6" path="res://POISONFLOWER_000/4.png" id="4_6or64"]
+[ext_resource type="Texture2D" uid="uid://sci01eviqhev" path="res://POISONFLOWER_000/5.png" id="5_aqh4n"]
+[ext_resource type="Texture2D" uid="uid://dkqc5u81yr1jp" path="res://POISONFLOWER_000/6.png" id="6_6eact"]
+[ext_resource type="Texture2D" uid="uid://bkysh1v1myohp" path="res://POISONFLOWER_000/7.png" id="7_a3h73"]
+[ext_resource type="Texture2D" uid="uid://c7bfbovf1blaa" path="res://POISONFLOWER_000/8.png" id="8_el8kn"]
+[ext_resource type="Texture2D" uid="uid://d1wr5bly0mmas" path="res://POISONFLOWER_000/9.png" id="9_2efw8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qiljj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2tsly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_o82iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_akyco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6or64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aqh4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6eact")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a3h73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_el8kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2efw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2efw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_el8kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a3h73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6eact")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aqh4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6or64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_akyco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2tsly")
+}],
+"loop": true,
+"name": &"POISONFLOWER",
+"speed": 7.0
+}]
+
+[node name="POISONFLOWER" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_qiljj")
+animation = &"POISONFLOWER"
+frame_progress = 0.8494316

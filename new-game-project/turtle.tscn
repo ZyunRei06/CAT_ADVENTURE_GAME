@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1a562btbiuml"]
+
+[ext_resource type="Texture2D" uid="uid://bqppsiwveunup" path="res://TURTLE_000/3.png" id="1_hlk0a"]
+[ext_resource type="Texture2D" uid="uid://bg66w04cubp6e" path="res://TURTLE_000/4.png" id="2_e1omo"]
+[ext_resource type="Texture2D" uid="uid://c4p2p7tyvf546" path="res://TURTLE_000/5.png" id="3_p4wnx"]
+[ext_resource type="Texture2D" uid="uid://cxbsad1pgpoek" path="res://TURTLE_000/6.png" id="4_uxseb"]
+[ext_resource type="Texture2D" uid="uid://cm3blbwc1na1t" path="res://TURTLE_000/7.png" id="5_vv5kj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1u4q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hlk0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e1omo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p4wnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uxseb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vv5kj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hlk0a"]
+radius = 77.0
+height = 378.0
+
+[node name="TURTLE" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f1u4q")
+frame_progress = 0.8308606
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-19, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_hlk0a")

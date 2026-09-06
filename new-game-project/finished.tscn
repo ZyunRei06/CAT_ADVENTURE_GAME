@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://bjpxqyx7w44jc"]
+
+[ext_resource type="Texture2D" uid="uid://cux2a11tn6kvt" path="res://BACKGROUNDOPTION.png" id="1_jyg8y"]
+[ext_resource type="Script" uid="uid://cc5gvi0jf7k20" path="res://finished.gd" id="1_y5wvf"]
+[ext_resource type="Texture2D" uid="uid://kb8urji6vknp" path="res://BACKGROUNDGATHER.png" id="2_vcwi5"]
+[ext_resource type="Texture2D" uid="uid://dl08ro6m83t2g" path="res://BACKGROUND.png" id="2_y5wvf"]
+[ext_resource type="Texture2D" uid="uid://b3lrrggr4nfie" path="res://CAT.png" id="5_on5r0"]
+[ext_resource type="FontFile" uid="uid://d2sh2arorfjsr" path="res://ArchitectsDaughter.ttf" id="6_xer2x"]
+[ext_resource type="AudioStream" uid="uid://phe80774gfd5" path="res://sfx_victory.mp3" id="7_xer2x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0hbk"]
+texture = ExtResource("2_y5wvf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5wvf"]
+texture = ExtResource("2_vcwi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pqf2d"]
+texture = ExtResource("2_vcwi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_on5r0"]
+texture = ExtResource("2_vcwi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xer2x"]
+texture = ExtResource("2_vcwi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_23m5a"]
+texture = ExtResource("2_vcwi5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_us4x5"]
+texture = ExtResource("2_vcwi5")
+
+[sub_resource type="FontVariation" id="FontVariation_23m5a"]
+base_font = ExtResource("6_xer2x")
+
+[node name="FINISHED" type="CanvasLayer"]
+script = ExtResource("1_y5wvf")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -3.0
+offset_top = -7.0
+offset_right = 1160.0
+offset_bottom = 654.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a0hbk")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 1160.0
+offset_bottom = 656.0
+
+[node name="BACKGROUND" type="Sprite2D" parent="Panel"]
+position = Vector2(587.5, 316)
+scale = Vector2(2.7882886, 2.4533331)
+texture = ExtResource("1_jyg8y")
+
+[node name="PLAYAGAIN" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 429.0
+offset_right = 536.0
+offset_bottom = 538.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxTexture_y5wvf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pqf2d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_on5r0")
+text = "PLAY AGAIN"
+
+[node name="EXIT" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 432.0
+offset_right = 929.0
+offset_bottom = 541.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxTexture_xer2x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_23m5a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_us4x5")
+text = "EXIT"
+
+[node name="CAT" type="Sprite2D" parent="."]
+position = Vector2(578, 198)
+scale = Vector2(0.92443603, 0.86866677)
+texture = ExtResource("5_on5r0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 243.0
+offset_top = 344.0
+offset_right = 880.0
+offset_bottom = 427.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_23m5a")
+theme_override_font_sizes/font_size = 29
+text = "Thank you for being alive and finished the
+adventure....."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WINSOUND" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_xer2x")
+autoplay = true
+
+[connection signal="pressed" from="Panel/PLAYAGAIN" to="." method="_on_playagain_pressed"]
+[connection signal="pressed" from="Panel/EXIT" to="." method="_on_exit_pressed"]

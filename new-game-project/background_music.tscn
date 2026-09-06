@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://288cc0noxv0d"]
+
+[ext_resource type="AudioStream" uid="uid://oqlnnqqrj3yp" path="res://BACKGROUNDMUSIC.mp3" id="1_4m5bw"]
+
+[node name="BACKGROUND MUSIC" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_4m5bw")
+autoplay = true
+parameters/looping = true

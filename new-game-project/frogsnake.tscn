@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1cvtp58w6axr"]
+
+[ext_resource type="Script" uid="uid://coi8ym8pdmf4v" path="res://frogsnake.gd" id="1_m8qg3"]
+[ext_resource type="Texture2D" uid="uid://bo7xhrxehby4n" path="res://FROGSNAKE_000/3.png" id="1_vu7an"]
+[ext_resource type="Texture2D" uid="uid://d3utdo3xoe18h" path="res://FROGSNAKE_000/4.png" id="2_m8qg3"]
+[ext_resource type="Texture2D" uid="uid://djxvqjqxks2h6" path="res://FROGSNAKE_000/5.png" id="3_bqan1"]
+[ext_resource type="Texture2D" uid="uid://bv3hmf55kqstg" path="res://FROGSNAKE_000/6.png" id="4_2uxj3"]
+[ext_resource type="Texture2D" uid="uid://bxsnn4d1fxk50" path="res://FROGSNAKE_000/7.png" id="5_aku7e"]
+[ext_resource type="Texture2D" uid="uid://dxk4jxtkmpcm6" path="res://FROGSNAKE_000/8.png" id="6_ajako"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hj54f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vu7an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m8qg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bqan1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2uxj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aku7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ajako")
+}],
+"loop": true,
+"name": &"WALK",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m8qg3"]
+radius = 67.0
+height = 274.0
+
+[node name="FROGSNAKE" type="CharacterBody2D"]
+script = ExtResource("1_m8qg3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hj54f")
+animation = &"WALK"
+frame_progress = 0.8763187
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(63, 24)
+shape = SubResource("CapsuleShape2D_m8qg3")

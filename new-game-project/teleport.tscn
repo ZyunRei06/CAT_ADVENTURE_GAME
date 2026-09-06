@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn32e047r02lq"]
+
+[ext_resource type="Texture2D" uid="uid://cdsw6mvr76ime" path="res://TELEPORT/1.png" id="1_xun25"]
+[ext_resource type="Texture2D" uid="uid://dtatmnvxu7iwn" path="res://TELEPORT/2.png" id="2_6ymuk"]
+[ext_resource type="Texture2D" uid="uid://qaglx0nu37ot" path="res://TELEPORT/3.png" id="3_x2xcy"]
+[ext_resource type="Texture2D" uid="uid://clmd8oc3wx01s" path="res://TELEPORT/4.png" id="4_wb74g"]
+[ext_resource type="Texture2D" uid="uid://cmnpwq45vvvw5" path="res://TELEPORT/5.png" id="5_ue3so"]
+[ext_resource type="Texture2D" uid="uid://bxiyuncua0e15" path="res://TELEPORT/6.png" id="6_f7xwx"]
+[ext_resource type="Texture2D" uid="uid://c7pi8rnqu7q25" path="res://TELEPORT/7.png" id="7_umvhw"]
+[ext_resource type="Texture2D" uid="uid://d3uegfwssl348" path="res://TELEPORT/8.png" id="8_uxodx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h03vu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xun25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ymuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x2xcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wb74g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ue3so")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f7xwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_umvhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uxodx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f7xwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_umvhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uxodx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f7xwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_umvhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uxodx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f7xwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_umvhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uxodx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f7xwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_umvhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uxodx")
+}],
+"loop": false,
+"name": &"TELEPORT",
+"speed": 10.0
+}]
+
+[node name="TELEPORT" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_h03vu")
+animation = &"TELEPORT"
+frame = 19
+frame_progress = 1.0

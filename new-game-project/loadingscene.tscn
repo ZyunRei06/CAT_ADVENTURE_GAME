@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://ynh5ntghthd7"]
+
+[ext_resource type="Script" uid="uid://c7e0x5r0ci86j" path="res://loadingscene.gd" id="1_qswef"]
+[ext_resource type="Texture2D" uid="uid://bnt6fyysymja8" path="res://image.jpg" id="2_diml6"]
+[ext_resource type="Texture2D" uid="uid://br7hmqsf6j57a" path="res://BARBORDER.png" id="2_si50b"]
+[ext_resource type="Texture2D" uid="uid://dl807rx7bciwy" path="res://BAR.png" id="3_diml6"]
+[ext_resource type="Texture2D" uid="uid://cgalh8jgfn34i" path="res://LOADTEXT.png" id="4_75ufn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75ufn"]
+texture = ExtResource("2_diml6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ee34i"]
+texture = ExtResource("4_75ufn")
+
+[node name="LOADINGSCENE" type="Node2D"]
+script = ExtResource("1_qswef")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1153.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_75ufn")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 294.0
+offset_top = 511.0
+offset_right = 789.0
+offset_bottom = 602.0
+texture_under = ExtResource("2_si50b")
+texture_progress = ExtResource("3_diml6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 378.0
+offset_top = 454.0
+offset_right = 687.0
+offset_bottom = 515.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ee34i")

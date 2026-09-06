@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://kfdnlcxqiphg"]
+
+[ext_resource type="Texture2D" uid="uid://cvj0jpe5kl0av" path="res://DESERT.jpg" id="1_8ioeg"]
+[ext_resource type="PackedScene" uid="uid://d2d8vc2v4vnlm" path="res://catcharacter.tscn" id="2_2obyw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfq2k"]
+texture = ExtResource("1_8ioeg")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bm1ln"]
+size = Vector2(1682, 102.5)
+
+[node name="DESERT" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1154.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yfq2k")
+
+[node name="GROUND" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GROUND"]
+position = Vector2(586, 595.75)
+shape = SubResource("RectangleShape2D_bm1ln")
+
+[node name="CATCHARACTER" parent="." instance=ExtResource("2_2obyw")]
+position = Vector2(107.99999, 489)
+scale = Vector2(0.37740102, 0.40016523)

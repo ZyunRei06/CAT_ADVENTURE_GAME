@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3henp1lp3w5s"]
+
+[ext_resource type="AudioStream" uid="uid://dqrmgvr6xsvmg" path="res://STAR/INTERACTSOUND.mp3" id="1_khwyr"]
+
+[node name="INTERACTSOUND" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_khwyr")
